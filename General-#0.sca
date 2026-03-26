@@ -1,0 +1,47 @@
+version 3
+run General-0-20250929-04:21:47-37180
+attr configname General
+attr datetime 20250929-04:21:47
+attr datetimef 20250929-042147
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Tictoc1
+attr processid 37180
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Tictoc1
+config sim-time-limit 100s
+config **.scalar-recording true
+config **.vector-recording true
+
+par Tictoc1.tic.out.channel typename "\"Delayed\""
+par Tictoc1.tic.out.channel disabled false
+attr mutable ""
+par Tictoc1.tic.out.channel delay 0.01s
+attr mutable ""
+attr unit s
+par Tictoc1.toc.out.channel typename "\"Delayed\""
+par Tictoc1.toc.out.channel disabled false
+attr mutable ""
+par Tictoc1.toc.out.channel delay 0.01s
+attr mutable ""
+attr unit s
+par Tictoc1.tic typename "\"Txc1\""
+scalar Tictoc1.tic hopCount:last 5000
+attr recordingmode last
+attr source hopCount
+attr title "Hop Count, last"
+par Tictoc1.toc typename "\"Txc1\""
+scalar Tictoc1.toc hopCount:last 5000
+attr recordingmode last
+attr source hopCount
+attr title "Hop Count, last"
+par Tictoc1 typename "\"Tictoc1\""
+
